@@ -3,7 +3,7 @@ import React from 'react'
 const Gallery = () => {
 	return (
 		<main>
-			<h1>Gallery</h1>
+			<h1 tabIndex="-1">Gallery</h1>
 		</main>
 	)
 }

@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ShopPage = () => {
-    return (
-        <div>ShopPage</div>
-    )
+const Shop = () => {
+	return (
+		<main>
+			<h1 tabIndex="-1">Shop</h1>
+		</main>
+	)
 }
 
-export default ShopPage
+export default Shop

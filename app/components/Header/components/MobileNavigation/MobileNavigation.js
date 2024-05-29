@@ -1,11 +1,13 @@
 "use client"
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import classes from './MobileNavigation.module.css'
 
-const MobileNavigation = props => {
+const MobileNavigation = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const pathname = usePathname()
 
   useEffect(() => {
     const header = document.querySelector('header');
@@ -36,6 +38,18 @@ const MobileNavigation = props => {
     }
   }
 
+  const navigateFromMobileNav = () => {
+    setIsExpanded(false);
+    setTimeout(() => {
+      document.querySelector('h1').focus();
+    }, 100)
+  }
+
+  console.log(pathname)
+  props.navLinks.forEach(navLink => {
+    console.log(navLink.path)
+  })
+
   return (
     <div
       role={isExpanded ? "dialog" : undefined}
@@ -51,8 +65,14 @@ const MobileNavigation = props => {
         (<nav>
           <ul>
             {props.navLinks.map(navLink => {
-              return (<li key={navLink.url}>
-                <Link href={`/${navLink.url}`}>{navLink.name}</Link>
+              return (<li key={navLink.path}>
+                <Link
+                  aria-current={pathname === navLink.path ? "page" : false}
+                  href={navLink.path}
+                  onClick={navigateFromMobileNav}
+                >
+                  {navLink.name}
+                </Link>
               </li>)
             })}
             <li>
@@ -61,7 +81,7 @@ const MobileNavigation = props => {
           </ul>
         </nav>)
       }
-    </div>
+    </div >
   )
 }
 

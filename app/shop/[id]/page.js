@@ -14,7 +14,7 @@ const ShopItem = ({ params }) => {
   })
   return (
     <main>
-      <h1>{shopItem.title}</h1>
+      <h1 tabIndex="-1">{shopItem.title}</h1>
     </main>
   )
 }
