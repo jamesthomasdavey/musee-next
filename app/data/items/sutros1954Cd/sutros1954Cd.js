@@ -35,7 +35,6 @@ export default {
       <input type="hidden" name="hosted_button_id" value="A4EU8JS7ENRXU">
       <input type="submit" name="submit" class="addToCartButton" value="Add to Cart">
       <input type="hidden" name="item_name" value="Sutro's 1954 CD">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
   `,
   price: '$15.00',

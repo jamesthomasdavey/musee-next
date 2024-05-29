@@ -45,11 +45,6 @@ const MobileNavigation = (props) => {
     }, 100)
   }
 
-  console.log(pathname)
-  props.navLinks.forEach(navLink => {
-    console.log(navLink.path)
-  })
-
   return (
     <div
       role={isExpanded ? "dialog" : undefined}

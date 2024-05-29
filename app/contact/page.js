@@ -4,7 +4,7 @@ const Contact = () => {
 	return (
 		<main>
 			<h1 tabIndex="-1">
-				Contact
+				Contact Us
 			</h1>
 		</main>
 	)

@@ -33,7 +33,6 @@ export default {
       <input type="hidden" name="hosted_button_id" value="P5XCN9E3T34WJ">
       <input type="submit" name="submit" class="addToCartButton" value="Add to Cart">
       <input type="hidden" name="item_name" value="The Zelinsky Collection Volume 3 CD">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
   `,
   price: '$10.00',
