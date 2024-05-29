@@ -1,9 +1,11 @@
 import React from 'react'
 
-const VisitPage = () => {
+const Visit = () => {
 	return (
-		<h1>Visit</h1>
+		<main>
+			<h1>Visit</h1>
+		</main>
 	)
 }
 
-export default VisitPage
+export default Visit

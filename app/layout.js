@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <footer>
           <address>
             <div>Pier 45</div>
-            <div>Fisherman's Wharf</div>
+            <div>Fisherman&apos;s Wharf</div>
             <div>San Francisco, CA 94113</div>
           </address>
           <div>

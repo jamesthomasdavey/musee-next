@@ -3,7 +3,7 @@ import React from 'react';
 
 import shopItems from "../../data/shopItems";
 
-const ShopItemPage = ({ params }) => {
+const ShopItem = ({ params }) => {
   const { id } = params;
   let shopItem;
 
@@ -13,10 +13,10 @@ const ShopItemPage = ({ params }) => {
     }
   })
   return (
-    <div>
+    <main>
       <h1>{shopItem.title}</h1>
-    </div>
+    </main>
   )
 }
 
-export default ShopItemPage;
+export default ShopItem;

@@ -1,9 +1,11 @@
 import React from 'react'
 
-const StoryPage = () => {
+const Story = () => {
 	return (
-		<div>StoryPage</div>
+		<main>
+			<h1>Our Story</h1>
+		</main>
 	)
 }
 
-export default StoryPage
+export default Story
