@@ -1,9 +1,9 @@
 import React from 'react'
 
 const VisitPage = () => {
-    return (
-        <div>VisitPage</div>
-    )
+	return (
+		<h1>Visit</h1>
+	)
 }
 
 export default VisitPage
