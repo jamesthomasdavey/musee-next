@@ -1,24 +1,32 @@
 import parse from 'html-react-parser';
 
+import ShopItemLink from './components/ShopItemLink/ShopItemLink';
+
 const ShopItem = (props) => {
+  const { name, images, title, price, shortDescription, isSoldOut, form } = props.shopItem
+
   let shopButton;
-  if (props.isSoldOut) {
+  if (isSoldOut) {
     shopButton = (
       <button disabled>
         Sold Out!
       </button>
     );
   } else {
-    shopButton = parse(props.form);
+    shopButton = parse(form);
   }
 
   return (
     <article>
-      <img src={props.imageSource} alt="" />
-      <h2>{props.title}</h2>
-      <span>{props.price}</span>
-      {parse(props.shortDescription)}
+      <img src={images[0].src} alt="" />
+      <ShopItemLink
+        name={name}
+        title={title}
+      />
+      <span>{price}</span>
+      {parse(shortDescription)}
       {shopButton}
+      <hr></hr>
     </article>
   )
 }
