@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import classes from './Navigation.module.css'
+
 const Navigation = (props) => {
   const pathname = usePathname()
 
@@ -12,7 +14,7 @@ const Navigation = (props) => {
   }
 
   return (
-    <nav id="main-nav">
+    <nav id="main-nav" className={classes.wrapper}>
       <ul>
         {props.navLinks.map(navLink => {
           return (

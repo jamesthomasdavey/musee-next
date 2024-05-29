@@ -1,0 +1,9 @@
+.wrapper {
+  display: none;
+}
+
+@media (min-width: 668px) {
+  .wrapper {
+    display: block;
+  }
+}

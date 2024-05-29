@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import Navigation from './components/Navigation/Navigation'
 import MobileNavigation from './components/MobileNavigation/MobileNavigation'
@@ -12,6 +13,8 @@ const navLinks = [
 ]
 
 const Header = () => {
+	const pathname = usePathname()
+
 	const navigateFromHeader = () => {
 		setTimeout(() => {
 			document.querySelector('h1').focus();
@@ -20,9 +23,9 @@ const Header = () => {
 
 	return (
 		<header>
-			<MobileNavigation navLinks={navLinks} />
 			<Link
 				id="logo"
+				aria-current={pathname === "/" ? "page" : false}
 				href="/"
 				onClick={navigateFromHeader}
 			>
@@ -34,6 +37,7 @@ const Header = () => {
 				</div>
 			</Link>
 			<Navigation navLinks={navLinks} />
+			<MobileNavigation navLinks={navLinks} />
 		</header>
 	)
 }

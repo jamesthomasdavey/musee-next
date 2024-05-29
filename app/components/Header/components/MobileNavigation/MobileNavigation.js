@@ -55,9 +55,13 @@ const MobileNavigation = (props) => {
       role={isExpanded ? "dialog" : undefined}
       aria-label={isExpanded ? "Menu" : undefined}
       aria-modal={isExpanded ? "true" : undefined}
-      className={[isExpanded ? classes.expanded : ""].join(" ")}
+      className={[classes.wrapper, isExpanded ? classes.expanded : ""].join(" ")}
     >
-      <button onClick={toggleIsExpanded} aria-expanded={isExpanded ? "true" : "false"} aria-label="Menu">
+      <button
+        onClick={toggleIsExpanded}
+        aria-expanded={isExpanded ? "true" : "false"}
+        aria-label="Menu"
+      >
         {isExpanded ? "X" : "🍔"}
       </button>
       {
@@ -76,7 +80,9 @@ const MobileNavigation = (props) => {
               </li>)
             })}
             <li>
-              <a href="https://www.facebook.com/museemecaniquesf/" target="_blank">Facebook</a>
+              <a href="https://www.facebook.com/museemecaniquesf/" target="_blank">
+                Facebook
+              </a>
             </li>
           </ul>
         </nav>)
