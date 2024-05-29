@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Navigation = (props) => {
   return (
-    <nav>
+    <nav id="main-nav">
       <ul>
         {props.navLinks.map(navLink => {
           return (<li key={navLink.url}>

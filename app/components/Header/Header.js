@@ -14,7 +14,7 @@ const Header = () => {
 	return (
 		<header>
 			<MobileNavigation navLinks={navLinks} />
-			<Link href="/">
+			<Link id="logo" href="/">
 				<div>
 					Musée Mécanique
 				</div>
