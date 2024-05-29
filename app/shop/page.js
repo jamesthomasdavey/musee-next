@@ -1,5 +1,6 @@
 "use client"
 import { useRouter, useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
 import ShopItem from './components/ShopItem/ShopItem'
 import ShopItemModal from './components/ShopItemModal/ShopItemModal'
@@ -8,7 +9,6 @@ import shopItems from './../data/shopItems'
 
 const Shop = () => {
 	const router = useRouter();
-	const searchParams = useSearchParams();
 
 	const closeShopItemModal = name => {
 		router.push('/shop', { scroll: false })
@@ -17,25 +17,22 @@ const Shop = () => {
 		}, 100)
 	}
 
-	let activeShopItem;
-
-	if (searchParams.get('item')) {
-		shopItems.forEach(shopItem => {
-			if (shopItem.name === searchParams.get('item')) {
-				activeShopItem = shopItem;
-			}
-		})
-	}
+	// if (searchParams.get('item')) {
+	// 	const searchParams = useSearchParams();
+	// 	shopItems.forEach(shopItem => {
+	// 		if (shopItem.name === searchParams.get('item')) {
+	// 			activeShopItem = shopItem;
+	// 		}
+	// 	})
+	// }
 
 	return (
 		<>
-			{
-				activeShopItem &&
+			<Suspense>
 				<ShopItemModal
 					close={closeShopItemModal}
-					shopItem={activeShopItem}
 				/>
-			}
+			</Suspense>
 			<main>
 				<h1 tabIndex="-1">Shop</h1>
 				{
