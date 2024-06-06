@@ -28,18 +28,15 @@ const MobileNavigation = (props) => {
       mainNav.removeAttribute("aria-hidden")
       footer.removeAttribute("aria-hidden")
     }
-  })
 
-
-  function reportWindowSize() {
-    if (isExpanded) {
-      if (window.innerWidth >= 668) {
-        setIsExpanded(false)
+    window.onresize = () => {
+      if (isExpanded) {
+        if (window.innerWidth >= 668) {
+          setIsExpanded(false)
+        }
       }
-    }
-  }
-
-  window.onresize = reportWindowSize;
+    };
+  })
 
   const toggleIsExpanded = () => {
     if (isExpanded) {
