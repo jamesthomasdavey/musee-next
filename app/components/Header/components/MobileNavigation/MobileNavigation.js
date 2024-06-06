@@ -30,6 +30,17 @@ const MobileNavigation = (props) => {
     }
   })
 
+
+  function reportWindowSize() {
+    if (isExpanded) {
+      if (window.innerWidth >= 668) {
+        setIsExpanded(false)
+      }
+    }
+  }
+
+  window.onresize = reportWindowSize;
+
   const toggleIsExpanded = () => {
     if (isExpanded) {
       setIsExpanded(false);
@@ -41,7 +52,7 @@ const MobileNavigation = (props) => {
   const navigateFromMobileNav = () => {
     setIsExpanded(false);
     setTimeout(() => {
-      document.querySelector('h1').focus();
+      // document.querySelector('h1').focus();
     }, 100)
   }
 

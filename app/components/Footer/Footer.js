@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
   const navigateFromFooter = () => {
     setTimeout(() => {
-      document.querySelector('h1').focus();
+      // document.querySelector('h1').focus();
     }, 100)
   }
 

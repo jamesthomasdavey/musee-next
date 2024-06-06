@@ -17,7 +17,7 @@ const Header = () => {
 
 	const navigateFromHeader = () => {
 		setTimeout(() => {
-			document.querySelector('h1').focus();
+			// document.querySelector('h1').focus();
 		}, 100)
 	}
 

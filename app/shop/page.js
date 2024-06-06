@@ -17,15 +17,6 @@ const Shop = () => {
 		}, 100)
 	}
 
-	// if (searchParams.get('item')) {
-	// 	const searchParams = useSearchParams();
-	// 	shopItems.forEach(shopItem => {
-	// 		if (shopItem.name === searchParams.get('item')) {
-	// 			activeShopItem = shopItem;
-	// 		}
-	// 	})
-	// }
-
 	return (
 		<>
 			<Suspense>

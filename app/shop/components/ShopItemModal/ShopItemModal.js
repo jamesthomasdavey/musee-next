@@ -19,9 +19,9 @@ const ShopItemModal = props => {
         <div
           className={classes.wrapper}
           role="dialog"
-          aria-labelledby={`${activeShopItem.name}-modal-heading`}
+          aria-labelledby="product-modal-heading"
         >
-          <h1 tabIndex="-1" autoFocus id={`${activeShopItem.name}-modal-heading`}>
+          <h1 tabIndex="-1" id="product-modal-heading">
             {activeShopItem.title}
           </h1>
           <button

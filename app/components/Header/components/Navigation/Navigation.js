@@ -9,7 +9,7 @@ const Navigation = (props) => {
 
   const navigateFromNav = () => {
     setTimeout(() => {
-      document.querySelector('h1').focus();
+      // document.querySelector('h1').focus();
     }, 100)
   }
 
