@@ -10,24 +10,24 @@ const MobileNavigation = (props) => {
   const pathname = usePathname()
 
   useEffect(() => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('#logo');
-    const mainNav = document.querySelector('#main-nav');
-    const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
-    if (isExpanded) {
-      header.setAttribute("role", "presentation")
-      logo.setAttribute("aria-hidden", "true")
-      main.setAttribute("aria-hidden", "true")
-      mainNav.setAttribute("aria-hidden", "true")
-      footer.setAttribute("aria-hidden", "true")
-    } else {
-      header.removeAttribute("role")
-      logo.removeAttribute("aria-hidden")
-      main.removeAttribute("aria-hidden")
-      mainNav.removeAttribute("aria-hidden")
-      footer.removeAttribute("aria-hidden")
-    }
+    // const header = document.querySelector('header');
+    // const logo = document.querySelector('#logo');
+    // const mainNav = document.querySelector('#main-nav');
+    // const main = document.querySelector('main');
+    // const footer = document.querySelector('footer');
+    // if (isExpanded) {
+    //   header.setAttribute("role", "presentation")
+    //   logo.setAttribute("aria-hidden", "true")
+    //   main.setAttribute("aria-hidden", "true")
+    //   mainNav.setAttribute("aria-hidden", "true")
+    //   footer.setAttribute("aria-hidden", "true")
+    // } else {
+    //   header.removeAttribute("role")
+    //   logo.removeAttribute("aria-hidden")
+    //   main.removeAttribute("aria-hidden")
+    //   mainNav.removeAttribute("aria-hidden")
+    //   footer.removeAttribute("aria-hidden")
+    // }
 
     window.onresize = () => {
       if (isExpanded) {
