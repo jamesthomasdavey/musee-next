@@ -1,12 +1,15 @@
 "use client"
-
+import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
 
 import classes from './ShopItemModal.module.css'
 import shopItems from './../../../data/shopItems'
 
-const ShopItemModal = props => {
+const ShopItemModal = (props) => {
+  const router = useRouter();
   const searchParams = useSearchParams();
+
   if (searchParams.get('item')) {
     let activeShopItem;
     shopItems.forEach(shopItem => {
