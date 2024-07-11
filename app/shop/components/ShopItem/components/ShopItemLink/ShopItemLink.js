@@ -7,11 +7,7 @@ const ShopItemLink = (props) => {
     <h2>
       <Link
         id={`${name}-link`}
-        href={{
-          pathname: '/shop',
-          query: { item: name }
-        }}
-        as={`/shop/${name}`}
+        href={`/shop/${name}`}
         scroll={false}
       >
         {title}
