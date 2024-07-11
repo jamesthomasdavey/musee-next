@@ -11,7 +11,7 @@ const ShopItemLink = (props) => {
           pathname: '/shop',
           query: { item: name }
         }}
-        as={`/shop/[name]`}
+        as={`/shop/${name}`}
         scroll={false}
       >
         {title}
