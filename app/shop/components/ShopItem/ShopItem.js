@@ -22,6 +22,8 @@ const ShopItem = (props) => {
       <ShopItemLink
         name={name}
         title={title}
+        shopItem={props.shopItem}
+        openShopItemModal={props.openShopItemModal}
       />
       <span>{price}</span>
       {parse(shortDescription)}

@@ -1,17 +1,25 @@
 "use client"
-import { useRouter } from 'next/navigation'
-import { Suspense } from 'react'
+import { useState } from 'react'
 
+// components
 import ShopItem from './components/ShopItem/ShopItem'
 import ShopItemModal from './components/ShopItemModal/ShopItemModal'
 
+// data
 import shopItems from './../data/shopItems'
 
-const ShopPage = ({ params }) => {
-	const router = useRouter();
+const ShopPage = () => {
+
+	const [modalActive, setModalActive] = useState(false);
+	const [activeShopItem, setActiveShopItem] = useState(null)
+
+	const openShopItemModal = shopItem => {
+		setModalActive(true);
+		setActiveShopItem(shopItem);
+	}
 
 	const closeShopItemModal = name => {
-		router.push('/shop', { scroll: false })
+		setModalActive(false);
 		setTimeout(() => {
 			document.querySelector(`#${name}-link`).focus()
 		}, 100)
@@ -19,11 +27,7 @@ const ShopPage = ({ params }) => {
 
 	return (
 		<>
-			<Suspense>
-				<ShopItemModal
-					close={closeShopItemModal}
-				/>
-			</Suspense>
+			{modalActive && <ShopItemModal shopItem={activeShopItem} closeShopItemModal={closeShopItemModal} />}
 			<main>
 				<h1 tabIndex="-1">Shop</h1>
 				{
@@ -32,6 +36,7 @@ const ShopPage = ({ params }) => {
 							<ShopItem
 								key={i}
 								shopItem={shopItem}
+								openShopItemModal={openShopItemModal}
 							/>
 						)
 					})
